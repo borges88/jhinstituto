@@ -27,8 +27,8 @@ export default function Hero() {
           {/* Placeholder for nutritionist image */}
           <div className="hero-image-placeholder">
             <img 
-              src="/fotoinicial.png" 
-              alt="JH Instituto" 
+              src="/foto-nutricionista-jessica-herculano.png" 
+              alt="Jéssica Herculano - Nutricionista" 
               className="hero-image"
             />
           </div>
