@@ -20,7 +20,7 @@ export default function Header() {
             <li><a href="#inicio">Início</a></li>
             <li><a href="#sobre">Nossa História</a></li>
             <li><a href="#metodo">Missão e Valores</a></li>
-            <li><a href="https://wa.me/5521964776890" target="_blank" rel="noopener noreferrer">Contato</a></li>
+            <li><a href="https://wa.me/5521997148623" target="_blank" rel="noopener noreferrer">Contato</a></li>
           </ul>
         </nav>
 
@@ -46,7 +46,7 @@ export default function Header() {
             <li><a href="#inicio" onClick={() => setIsMenuOpen(false)}>Início</a></li>
             <li><a href="#sobre" onClick={() => setIsMenuOpen(false)}>Nossa História</a></li>
             <li><a href="#metodo" onClick={() => setIsMenuOpen(false)}>Missão e Valores</a></li>
-            <li><a href="https://wa.me/5521964776890" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>Contato</a></li>
+            <li><a href="https://wa.me/5521997148623" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>Contato</a></li>
           </ul>
           <div className="social-icons-mobile">
             <a href="https://www.instagram.com/nutrijessicaherculano?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram size={24} /></a>

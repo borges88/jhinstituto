@@ -32,17 +32,17 @@ export default function Footer() {
             <li>
               <Phone size={18} className="contact-icon" />
               <a 
-                href="https://wa.me/5521964776890" 
+                href="https://wa.me/5521997148623" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 style={{ color: 'inherit', textDecoration: 'none' }}
               >
-                (21) 96477-6890
+                (21) 99714-8623
               </a>
             </li>
             <li>
               <Mail size={18} className="contact-icon" />
-              <span>contato@jhinstituto.com.br</span>
+              <span>jhinstituto.nutri@gmail.com</span>
             </li>
           </ul>
         </div>
