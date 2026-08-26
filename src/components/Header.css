@@ -137,3 +137,23 @@
     color: var(--color-primary);
   }
 }
+
+/* E-book Menu Link Style */
+.ebook-menu-link {
+  color: #BE5028 !important;
+  font-weight: 700 !important;
+  border: 1px solid #BE5028;
+  padding: 4px 10px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.ebook-menu-link:after {
+  display: none !important; /* hide the underline animation */
+}
+
+.ebook-menu-link:hover {
+  background-color: #BE5028;
+  color: #ffffff !important;
+}
+

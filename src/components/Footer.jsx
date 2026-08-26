@@ -8,7 +8,10 @@ export default function Footer() {
     <footer id="contato" className="footer">
       <div className="container footer-container">
         <div className="footer-col about-col">
-          <h3 className="footer-logo">JH Instituto</h3>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+            <img src="/logo-jh-instituto.png" alt="Logo JH Instituto" style={{ height: '40px', width: 'auto', objectFit: 'contain' }} />
+            <h3 className="footer-logo" style={{ marginBottom: 0 }}>JH Instituto</h3>
+          </div>
           <p className="footer-desc">
             Formando profissionais humanizados e transformando a prática da saúde com ciência e empatia.
           </p>

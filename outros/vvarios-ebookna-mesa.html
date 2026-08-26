@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consulta Nutricional Passo a Passo | JH Instituto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F6F1E7;
+    --paper:#FBF8F2;
+    --ink:#20291F;
+    --forest:#1F3A2C;
+    --forest-deep:#152A20;
+    --sage:#5C7A5E;
+    --sage-light:#A9C0A2;
+    --rust:#BE5028;
+    --rust-deep:#8E3A1B;
+    --line:#D8CFB9;
+    --gold:#C79A48;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Work Sans', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.serif{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    letter-spacing:-0.01em;
+    margin:0;
+  }
+  p{line-height:1.65;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 32px;}
+  .eyebrow{
+    text-transform:uppercase;
+    letter-spacing:0.14em;
+    font-size:12px;
+    font-weight:600;
+    color:var(--rust-deep);
+  }
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+
+  /* HERO */
+  .hero{
+    background:var(--forest);
+    color:var(--cream);
+    padding:72px 0 96px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero .wrap{
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:56px;
+    align-items:center;
+    position:relative;
+    z-index:2;
+  }
+  .hero .eyebrow{color:var(--gold);}
+  .hero h1{
+    font-size:44px;
+    line-height:1.12;
+    color:#fff;
+    margin:14px 0 20px;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--sage-light);
+  }
+  .hero p.lede{
+    font-size:18px;
+    color:#DDE5D6;
+    max-width:520px;
+    margin-bottom:32px;
+  }
+  .cta-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:var(--rust);
+    color:#fff;
+    border:none;
+    padding:16px 30px;
+    font-family:'Work Sans',sans-serif;
+    font-weight:600;
+    font-size:16px;
+    border-radius:4px;
+    cursor:pointer;
+    text-decoration:none;
+  }
+  .btn.secondary{
+    background:transparent;
+    border:1px solid rgba(255,255,255,0.35);
+    color:#fff;
+  }
+  .microcopy{font-size:13px;color:#B7C4AF;margin-top:14px;}
+
+  .cover-card{
+    background:var(--paper);
+    border-radius:6px;
+    padding:22px;
+    box-shadow:0 30px 60px rgba(0,0,0,0.35);
+    transform:rotate(2deg);
+  }
+  .cover-inner{
+    background:linear-gradient(180deg,var(--forest-deep),var(--forest) 60%,var(--sage) 140%);
+    border-radius:2px;
+    aspect-ratio:5/7;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    padding:34px 28px;
+    color:#fff;
+    border:1px solid rgba(255,255,255,0.15);
+  }
+  .cover-inner .tag{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--sage-light);}
+  .cover-inner h2{font-size:30px;color:#fff;line-height:1.15;margin-top:10px;}
+  .cover-inner .sub{font-size:14px;color:#CBD8C4;margin-top:14px;}
+  .cover-inner .num{
+    font-family:'Fraunces',serif;
+    font-size:60px;
+    color:rgba(255,255,255,0.16);
+    line-height:1;
+  }
+  .cover-inner .author{font-size:13px;color:#EDE7D4;border-top:1px solid rgba(255,255,255,0.2);padding-top:14px;}
+
+  .hero-bg-index{
+    position:absolute;
+    right:-60px;
+    top:0;
+    bottom:0;
+    width:340px;
+    opacity:0.06;
+    z-index:1;
+    font-family:'Fraunces',serif;
+    font-size:220px;
+    color:#fff;
+    line-height:1;
+    display:flex;
+    align-items:center;
+  }
+
+  /* PAIN SECTION */
+  .pain{padding:88px 0;}
+  .pain .head{max-width:640px;margin-bottom:48px;}
+  .pain h2{font-size:32px;line-height:1.25;}
+  .pain-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .pain-cell{
+    background:var(--paper);
+    padding:32px 28px;
+  }
+  .pain-cell .mark{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    color:var(--rust);
+    font-size:22px;
+    display:block;
+    margin-bottom:12px;
+  }
+  .pain-cell p{font-size:15px;color:#3E4A3B;}
+
+  .bridge{
+    background:var(--sage-light);
+    padding:40px 0;
+    text-align:center;
+  }
+  .bridge p{
+    font-family:'Fraunces',serif;
+    font-size:24px;
+    font-style:italic;
+    color:var(--forest-deep);
+    max-width:760px;
+    margin:0 auto;
+    line-height:1.4;
+  }
+
+  /* WHAT'S INSIDE */
+  .inside{padding:96px 0;}
+  .inside .head{max-width:600px;margin-bottom:16px;}
+  .inside h2{font-size:32px;}
+  .inside .head p{color:#4A5647;font-size:16px;margin-top:14px;}
+
+  .roadmap{
+    margin-top:56px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:0;
+    border-top:1px solid var(--line);
+  }
+  .stage{
+    padding:30px 36px;
+    border-bottom:1px solid var(--line);
+    display:flex;
+    gap:20px;
+  }
+  .stage:nth-child(odd){border-right:1px solid var(--line);}
+  .stage .idx{
+    font-family:'Fraunces',serif;
+    font-size:15px;
+    color:var(--rust);
+    font-weight:600;
+    min-width:36px;
+  }
+  .stage h3{font-size:18px;margin-bottom:8px;color:var(--forest-deep);}
+  .stage p{font-size:14px;color:#4A5647;}
+  .stage .chaps{
+    font-size:12px;
+    color:var(--sage);
+    margin-top:10px;
+    letter-spacing:0.01em;
+  }
+
+  /* AUTHOR */
+  .author-strip{
+    background:var(--forest-deep);
+    color:#fff;
+    padding:64px 0;
+  }
+  .author-strip .wrap{
+    display:grid;
+    grid-template-columns:180px 1fr;
+    gap:40px;
+    align-items:center;
+  }
+  .avatar-block{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    background:linear-gradient(160deg,var(--sage),var(--forest));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Fraunces',serif;
+    font-size:52px;
+    color:#fff;
+    border:3px solid var(--gold);
+  }
+  .author-strip .eyebrow{color:var(--gold);}
+  .author-strip h3{color:#fff;font-size:24px;margin:10px 0 14px;}
+  .author-strip p{color:#CBD8C4;font-size:15px;max-width:620px;}
+  .cred-row{
+    display:flex;
+    gap:28px;
+    margin-top:20px;
+    flex-wrap:wrap;
+  }
+  .cred{font-size:13px;color:#EDE7D4;}
+  .cred b{display:block;font-family:'Fraunces',serif;font-size:20px;color:#fff;font-weight:500;}
+
+  /* FOR WHOM */
+  .forwhom{padding:96px 0;background:var(--paper);}
+  .forwhom .wrap{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:48px;
+  }
+  .forwhom h2{font-size:28px;margin-bottom:20px;}
+  .list-block ul{list-style:none;margin:0;padding:0;}
+  .list-block li{
+    display:flex;
+    gap:12px;
+    padding:12px 0;
+    border-bottom:1px solid var(--line);
+    font-size:15px;
+  }
+  .list-block li:last-child{border-bottom:none;}
+  .check{color:var(--forest);font-weight:700;}
+  .cross{color:var(--rust);font-weight:700;}
+
+  /* BONUS / WELLBEING */
+  .bonus{padding:80px 0;background:var(--sage-light);}
+  .bonus .wrap{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:48px;
+    align-items:center;
+  }
+  .bonus .eyebrow{color:var(--rust-deep);}
+  .bonus h2{font-size:28px;color:var(--forest-deep);margin:12px 0 16px;}
+  .bonus p{color:#2E3A2C;font-size:15px;}
+  .bonus-card{
+    background:var(--forest-deep);
+    color:#fff;
+    padding:36px;
+    border-radius:6px;
+  }
+  .bonus-card .tag{color:var(--gold);font-size:12px;letter-spacing:0.12em;text-transform:uppercase;}
+  .bonus-card h3{color:#fff;font-size:20px;margin:10px 0;}
+  .bonus-card p{color:#CBD8C4;font-size:14px;}
+
+  /* GUARANTEE + PRICE */
+  .offer{padding:96px 0;background:var(--forest);color:#fff;text-align:center;}
+  .offer .eyebrow{color:var(--gold);}
+  .offer h2{color:#fff;font-size:34px;margin:14px 0 18px;max-width:680px;margin-left:auto;margin-right:auto;}
+  .offer p.sub{color:#CBD8C4;max-width:560px;margin:0 auto 36px;font-size:16px;}
+  .price-card{
+    background:var(--paper);
+    color:var(--ink);
+    max-width:420px;
+    margin:0 auto;
+    border-radius:8px;
+    padding:36px 40px;
+  }
+  .price-card .was{font-size:14px;color:#8A8577;text-decoration:line-through;}
+  .price-card .now{
+    font-family:'Fraunces',serif;
+    font-size:46px;
+    color:var(--forest-deep);
+    margin:6px 0 4px;
+  }
+  .price-card .now sup{font-size:20px;}
+  .price-card .terms{font-size:13px;color:#6B6656;margin-bottom:22px;}
+  .guarantee-row{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    margin-top:34px;
+    color:#DDE5D6;
+    font-size:13px;
+  }
+  .seal{
+    width:34px;height:34px;border-radius:50%;
+    border:1px solid var(--gold);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Fraunces',serif;color:var(--gold);font-size:14px;
+  }
+
+  /* FAQ */
+  .faq{padding:88px 0;}
+  .faq h2{font-size:28px;margin-bottom:36px;}
+  .faq-item{
+    border-bottom:1px solid var(--line);
+    padding:22px 0;
+  }
+  .faq-item h4{font-family:'Fraunces',serif;font-weight:500;font-size:17px;margin-bottom:8px;color:var(--forest-deep);}
+  .faq-item p{font-size:14.5px;color:#4A5647;}
+
+  .final-cta{
+    background:var(--rust);
+    color:#fff;
+    padding:64px 0;
+    text-align:center;
+  }
+  .final-cta h2{color:#fff;font-size:28px;margin-bottom:20px;}
+  .final-cta .btn.secondary{background:#fff;color:var(--rust-deep);border:none;font-weight:700;}
+
+  footer{padding:32px 0;text-align:center;font-size:12px;color:#8A8577;}
+
+  @media (max-width:860px){
+    .hero .wrap{grid-template-columns:1fr;}
+    .hero h1{font-size:32px;}
+    .pain-grid{grid-template-columns:1fr;}
+    .roadmap{grid-template-columns:1fr;}
+    .stage:nth-child(odd){border-right:none;}
+    .author-strip .wrap{grid-template-columns:1fr;text-align:center;}
+    .avatar-block{margin:0 auto;}
+    .forwhom .wrap, .bonus .wrap{grid-template-columns:1fr;}
+    .hero-bg-index{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-bg-index">01</div>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Guia prático &mdash; JH Instituto</span>
+      <h1>Sua primeira consulta não precisa começar com as mãos tremendo.</h1>
+      <p class="lede">Um roteiro clínico completo, do acolhimento ao retorno, para nutricionistas que aprenderam a teoria na faculdade e agora precisam da sequência prática de uma consulta real.</p>
+      <div class="cta-row">
+        <a class="btn" href="#oferta">Quero o meu roteiro agora <span aria-hidden="true">&rarr;</span></a>
+        <a class="btn secondary" href="#dentro">Ver o que tem dentro</a>
+      </div>
+      <p class="microcopy">E-book digital &middot; acesso imediato &middot; leitura em qualquer dispositivo</p>
+    </div>
+    <div class="cover-card">
+      <div class="cover-inner">
+        <div>
+          <span class="tag">Passo a passo clínico</span>
+          <h2>Consulta Nutricional</h2>
+          <p class="sub">Da anamnese ao plano de ação &mdash; a estrutura completa de um atendimento com confiança.</p>
+        </div>
+        <div class="num">15</div>
+        <div class="author">Jessica Herculano da Silva &middot; Nutricionista CRN4</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pain">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Se algo disso soa familiar</span>
+      <h2>A faculdade te ensinou a teoria. Ninguém te ensinou o que fazer no minuto em que o paciente senta na sua frente.</h2>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-cell">
+        <span class="mark">&ldquo;E se eu esquecer alguma pergunta importante?&rdquo;</span>
+        <p>Você monta a ficha de anamnese, mas na hora H a conversa foge do roteiro e você não sabe como retomar sem parecer robótica.</p>
+      </div>
+      <div class="pain-cell">
+        <span class="mark">&ldquo;Como eu meço isso sem constranger o paciente?&rdquo;</span>
+        <p>Antropometria, exames, perguntas sobre peso e hábitos: tudo isso pode gerar desconforto se você não souber conduzir com técnica e empatia.</p>
+      </div>
+      <div class="pain-cell">
+        <span class="mark">&ldquo;Fiz tudo certo e o paciente não voltou.&rdquo;</span>
+        <p>Um plano tecnicamente correto que ninguém segue não vale nada. Falta a ponte entre o diagnóstico nutricional e a adesão real.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="bridge">
+  <p>&ldquo;Este é o roteiro prático que eu gostaria de ter tido no início da minha própria carreira.&rdquo; &mdash; Jessica Herculano da Silva</p>
+</div>
+
+<section class="inside" id="dentro">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">O que você recebe</span>
+      <h2>15 capítulos que transformam a teoria da faculdade em uma consulta que flui do início ao fim.</h2>
+      <p>Estruturado na ordem exata em que uma consulta acontece de verdade &mdash; para você abrir o e-book e saber exatamente em qual etapa está.</p>
+    </div>
+
+    <div class="roadmap">
+      <div class="stage">
+        <span class="idx">I</span>
+        <div>
+          <h3>Antes do paciente sentar</h3>
+          <p>Como organizar consultório, materiais e cabeça para eliminar a insegurança dos primeiros trinta segundos de consulta.</p>
+          <div class="chaps">Cap. 1&ndash;2 &middot; Introdução e preparação para a anamnese</div>
+        </div>
+      </div>
+      <div class="stage">
+        <span class="idx">II</span>
+        <div>
+          <h3>A arte da anamnese</h3>
+          <p>O roteiro de perguntas, as técnicas de escuta ativa e os erros que fazem o paciente fechar a conversa cedo demais.</p>
+          <div class="chaps">Cap. 3 &middot; Técnica de anamnese</div>
+        </div>
+      </div>
+      <div class="stage">
+        <span class="idx">III</span>
+        <div>
+          <h3>Antropometria e exames sem gerar constrangimento</h3>
+          <p>A técnica correta de cada medida, o embasamento legal para solicitar exames, e como interpretá-los junto com o quadro clínico.</p>
+          <div class="chaps">Cap. 4&ndash;7 &middot; Antropometria e exames laboratoriais</div>
+        </div>
+      </div>
+      <div class="stage">
+        <span class="idx">IV</span>
+        <div>
+          <h3>Comunicação que gera adesão</h3>
+          <p>Como traduzir jargão técnico, alinhar expectativas e construir um plano de ação que o paciente realmente consegue seguir.</p>
+          <div class="chaps">Cap. 8&ndash;10 &middot; Comunicação e plano de ação</div>
+        </div>
+      </div>
+      <div class="stage">
+        <span class="idx">V</span>
+        <div>
+          <h3>Retorno, acompanhamento e perfis especiais</h3>
+          <p>Estrutura de retorno, como medir progresso além da balança, e adaptações para idosos, gestantes, crianças e restrições alimentares.</p>
+          <div class="chaps">Cap. 11&ndash;12 &middot; Acompanhamento e perfis específicos</div>
+        </div>
+      </div>
+      <div class="stage">
+        <span class="idx">VI</span>
+        <div>
+          <h3>Checklist final e o cuidado com você</h3>
+          <p>Uma revisão direta dos erros mais comuns, e um capítulo dedicado ao bem-estar de quem está do outro lado da mesa.</p>
+          <div class="chaps">Cap. 13&ndash;15 &middot; Erros comuns e bem-estar do nutricionista</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="author-strip">
+  <div class="wrap">
+    <div class="avatar-block">JH</div>
+    <div>
+      <span class="eyebrow">Quem escreveu este roteiro</span>
+      <h3>Jessica Herculano da Silva</h3>
+      <p>Nutricionista formada pela IBMR, com pós-graduação em Terapia Nutricional em Pediatria pela UFRJ e em Nutrição na Terceira Idade. Idealizadora do JH Instituto Multidisciplinar, dedicado a capacitar nutricionistas para atuarem com confiança e segurança técnica.</p>
+      <div class="cred-row">
+        <div class="cred"><b>7 anos</b>de atuação clínica</div>
+        <div class="cred"><b>5 anos</b>como nutricionista geriátrica em ILPI</div>
+        <div class="cred"><b>CRN4</b>19100780</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="forwhom">
+  <div class="wrap">
+    <div class="list-block">
+      <h2>Este e-book é para você que&hellip;</h2>
+      <ul>
+        <li><span class="check">&check;</span> Está recém-formada e vai atender seus primeiros pacientes</li>
+        <li><span class="check">&check;</span> Sente que domina a teoria, mas trava na hora de conduzir a consulta na prática</li>
+        <li><span class="check">&check;</span> Quer um roteiro claro, sem depender só da própria memória sob pressão</li>
+        <li><span class="check">&check;</span> Está montando o próprio consultório e quer transmitir profissionalismo desde a primeira consulta</li>
+      </ul>
+    </div>
+    <div class="list-block">
+      <h2>Não é para você que&hellip;</h2>
+      <ul>
+        <li><span class="cross">&times;</span> Busca protocolos prontos de manejo clínico de patologias específicas</li>
+        <li><span class="cross">&times;</span> Quer um curso com aulas em vídeo e mentoria ao vivo</li>
+        <li><span class="cross">&times;</span> Já atua há anos e domina completamente a condução da consulta</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="bonus">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">O capítulo que ninguém fala sobre</span>
+      <h2>Cuidar do paciente também passa por cuidar de você.</h2>
+      <p>Além do passo a passo técnico, o e-book reserva um capítulo inteiro para a sobrecarga emocional da profissão &mdash; porque um profissional exausto tem menos capacidade de escuta, paciência e presença, exatamente os recursos que tornam uma consulta eficaz.</p>
+    </div>
+    <div class="bonus-card">
+      <span class="tag">Capítulo 14</span>
+      <h3>Cuidando de você também</h3>
+      <p>Como reconhecer a sobrecarga emocional, separar dedicação profissional de responsabilidade pelo resultado do paciente, e construir uma rotina clínica sustentável a longo prazo.</p>
+    </div>
+  </div>
+</section>
+
+<section class="offer" id="oferta">
+  <div class="wrap">
+    <span class="eyebrow">Acesso imediato</span>
+    <h2>Leve o roteiro completo da sua primeira consulta com confiança para dentro do seu consultório hoje.</h2>
+    <p class="sub">E-book digital em PDF, com acesso vitalício e leitura em qualquer dispositivo.</p>
+    <div class="price-card">
+      <span class="was">De R$ [preço cheio]</span>
+      <div class="now">R$ [preço]<sup>,00</sup></div>
+      <p class="terms">ou em até [X]x no cartão &middot; pagamento único</p>
+      <a class="btn" style="width:100%;justify-content:center;" href="#">Quero minha consulta com confiança <span aria-hidden="true">&rarr;</span></a>
+    </div>
+    <div class="guarantee-row">
+      <span class="seal">7</span>
+      <span>Garantia de 7 dias &mdash; não gostou, devolvemos seu dinheiro.</span>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Perguntas frequentes</h2>
+    <div class="faq-item">
+      <h4>Eu ainda sou estudante, esse e-book serve para mim?</h4>
+      <p>Sim. Ele foi escrito pensando em quem está terminando a faculdade e vai atender os primeiros pacientes, exatamente o momento em que falta a sequência prática que a teoria não ensina.</p>
+    </div>
+    <div class="faq-item">
+      <h4>É um curso com aulas em vídeo?</h4>
+      <p>Não, é um e-book digital em PDF. Se você procura mentoria ao vivo com supervisão, a JH Instituto também tem esse formato &mdash; fale com a gente para saber mais.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Ele ensina a tratar patologias específicas?</h4>
+      <p>Não é esse o foco. O e-book ensina a estrutura e a técnica de condução da consulta em si &mdash; a base que se aplica a qualquer perfil de paciente.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Como recebo o material?</h4>
+      <p>Após a confirmação do pagamento, você recebe o link de download do PDF no e-mail cadastrado, com acesso imediato e vitalício.</p>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="wrap">
+    <h2>Sua próxima consulta pode ser a primeira que você conduz com segurança do início ao fim.</h2>
+    <a class="btn secondary" href="#oferta">Garantir meu e-book agora</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">JH Instituto Multidisciplinar &middot; Jessica Herculano da Silva, Nutricionista CRN4 19100780</div>
+</footer>
+
+</body>
+</html>
