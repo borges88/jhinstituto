@@ -174,7 +174,7 @@ export default function Ebook() {
           <div>
             <span className="ebook-eyebrow">O capítulo que ninguém fala sobre</span>
             <h2>Cuidar do paciente também passa por cuidar de você.</h2>
-            <p>Além do passo a passo técnico, o e-book reserva um capítulo inteiro para a sobrecarga emocional da profissão &mdash; porque um profissional exausto tem menos capacidade de escuta, paciência e presença, exatamente os recursos que tornam uma consulta eficaz.</p>
+            <p>Além do passo a passo técnico, o e-book reserva um capítulo inteiro para a sobrecarga emocional da profissão, porque um profissional exausto tem menos capacidade de escuta, paciência e presença, exatamente os recursos que tornam uma consulta eficaz.</p>
           </div>
           <div className="bonus-card">
             <span className="bonus-tag">Capítulo 14</span>
