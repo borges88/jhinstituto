@@ -22,7 +22,7 @@ export default function Ebook() {
             <p className="microcopy">E-book digital &middot; acesso imediato &middot; leitura em qualquer dispositivo</p>
           </div>
           <div className="cover-image-container" style={{ display: 'flex', justifyContent: 'center' }}>
-            <img src="/guiapratico.png" alt="Capa do E-book Consulta Nutricional" style={{ width: '100%', maxWidth: '460px', filter: 'drop-shadow(0 25px 35px rgba(0,0,0,0.4))' }} />
+            <img src="/e-book-guia-nutriciona-jessica-herculano.png" alt="Capa do E-book Consulta Nutricional" style={{ width: '100%', maxWidth: '460px', filter: 'drop-shadow(0 25px 35px rgba(0,0,0,0.4))' }} />
           </div>
         </div>
       </section>
@@ -41,7 +41,7 @@ export default function Ebook() {
               <h2>A faculdade te ensinou a teoria. Ninguém te ensinou o que fazer no minuto em que o paciente senta na sua frente.</h2>
             </div>
             <div className="pain-image">
-              <img src="/varios-ebook-mesa.png" alt="Vários livros na mesa" />
+              <img src="/livros-consulta-nutricional-jh-instituto.jpeg" alt="Livros Consulta Nutricional JH Instituto" />
             </div>
           </div>
           <div className="pain-grid" style={{ marginTop: '48px' }}>
@@ -62,7 +62,7 @@ export default function Ebook() {
       </section>
 
       <div className="bridge">
-        <p>&ldquo;Este é o roteiro prático que eu gostaria de ter tido no início da minha própria carreira.&rdquo; &mdash; Jessica Herculano da Silva</p>
+        <p>&ldquo;Este é o roteiro prático que eu gostaria de ter tido no início da minha própria carreira.&rdquo; Jessica Herculano da Silva</p>
       </div>
 
       <section className="inside" id="dentro">
@@ -71,10 +71,10 @@ export default function Ebook() {
             <div className="head">
               <span className="ebook-eyebrow">O que você recebe</span>
               <h2>15 capítulos que transformam a teoria da faculdade em uma consulta que flui do início ao fim.</h2>
-              <p>Estruturado na ordem exata em que uma consulta acontece de verdade &mdash; para você abrir o e-book e saber exatamente em qual etapa está.</p>
+              <p>Estruturado na ordem exata em que uma consulta acontece de verdade, para você abrir o e-book e saber exatamente em qual etapa está.</p>
             </div>
             <div className="inside-image">
-              <img src="/nutricionista-jessica-de-jaleco.jpeg" alt="Nutricionista Jessica de Jaleco" />
+              <img src="/nutricionista-jessica-herculano-atendendo.jpeg" alt="Nutricionista Jessica Herculano Atendendo" />
             </div>
           </div>
 
@@ -133,7 +133,7 @@ export default function Ebook() {
 
       <section className="author-strip">
         <div className="ebook-wrap">
-          <img src="/nutricionista-jessica-herculano-jaleco.jpeg" alt="Jessica Herculano da Silva" className="avatar-block" />
+          <img src="/jh-instituto-jessica-nutricionista.png" alt="Jessica Herculano da Silva" className="avatar-block" />
           <div>
             <span className="ebook-eyebrow">Quem escreveu este roteiro</span>
             <h3>Jessica Herculano da Silva</h3>
@@ -211,11 +211,11 @@ export default function Ebook() {
           </div>
           <div className="faq-item">
             <h4>É um curso com aulas em vídeo?</h4>
-            <p>Não, é um e-book digital em PDF. Se você procura mentoria ao vivo com supervisão, a JH Instituto também tem esse formato &mdash; fale com a gente para saber mais.</p>
+            <p>Não, é um e-book digital em PDF. Se você procura mentoria ao vivo com supervisão, a JH Instituto também tem esse formato, fale com a gente para saber mais.</p>
           </div>
           <div className="faq-item">
             <h4>Ele ensina a tratar patologias específicas?</h4>
-            <p>Não é esse o foco. O e-book ensina a estrutura e a técnica de condução da consulta em si &mdash; a base que se aplica a qualquer perfil de paciente.</p>
+            <p>Não é esse o foco. O e-book ensina a estrutura e a técnica de condução da consulta em si, a base que se aplica a qualquer perfil de paciente.</p>
           </div>
           <div className="faq-item">
             <h4>Como recebo o material?</h4>
