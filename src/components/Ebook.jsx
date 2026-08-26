@@ -186,18 +186,25 @@ export default function Ebook() {
 
       <section className="offer" id="oferta">
         <div className="ebook-wrap">
-          <span className="ebook-eyebrow">Acesso imediato</span>
-          <h2>Leve o roteiro completo da sua primeira consulta com confiança para dentro do seu consultório hoje.</h2>
-          <p className="sub">E-book digital em PDF, com acesso vitalício e leitura em qualquer dispositivo.</p>
-          <div className="price-card">
-            <span className="was">De R$ 97,00</span>
-            <div className="now">R$ 58<sup>,78</sup></div>
-            <p className="terms">ou em até 5x no cartão</p>
-            <a className="ebook-btn" style={{ width: '100%', justifyContent: 'center' }} href="https://wa.me/5521997148623?text=Ol%C3%A1%2C%20quero%20comprar%20o%20seu%20e-book" target="_blank" rel="noopener noreferrer">Quero minha consulta com confiança <span aria-hidden="true">&rarr;</span></a>
+          <span className="ebook-eyebrow">Quase lá...</span>
+          <h2>O roteiro definitivo para a sua primeira consulta estará disponível muito em breve.</h2>
+          <p className="sub">Estamos preparando um material incrível para transformar a segurança dos seus atendimentos.</p>
+          <div className="price-card" style={{ padding: '40px 32px' }}>
+            <h3 style={{ fontSize: '28px', color: 'var(--ebook-forest-deep)', marginBottom: '16px', fontFamily: 'Fraunces, serif' }}>Lançamento em Breve</h3>
+            <p style={{ color: 'var(--ebook-text)', marginBottom: '32px', fontSize: '16px' }}>
+              Estamos ajustando os últimos detalhes para entregar o melhor material para você. A espera vai valer a pena!
+            </p>
+            <div style={{ width: '100%', backgroundColor: '#e5e7eb', borderRadius: '999px', height: '12px', marginBottom: '16px', overflow: 'hidden' }}>
+              <div style={{ width: '85%', backgroundColor: 'var(--ebook-accent)', height: '100%', borderRadius: '999px' }}></div>
+            </div>
+            <p style={{ fontSize: '14px', color: 'var(--ebook-text-light)', fontWeight: '600', marginBottom: '32px' }}>Carregando... 85%</p>
+            <a className="ebook-btn" style={{ width: '100%', justifyContent: 'center' }} href="https://wa.me/5521997148623?text=Ol%C3%A1%2C%20gostaria%20de%20reservar%20o%20meu%20e-book" target="_blank" rel="noopener noreferrer">
+              Reserve o seu <span aria-hidden="true">&rarr;</span>
+            </a>
           </div>
-          <div className="guarantee-row">
-            <span className="seal">7</span>
-            <span>Garantia de 7 dias &mdash; não gostou, devolvemos seu dinheiro.</span>
+          <div className="guarantee-row" style={{ opacity: 0.5 }}>
+            <span className="seal" style={{ filter: 'grayscale(100%)' }}>⏳</span>
+            <span>Fique de olho! Em breve liberaremos as vendas oficiais.</span>
           </div>
         </div>
       </section>
