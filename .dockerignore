@@ -1,0 +1,12 @@
+.git
+.gitignore
+node_modules
+dist
+outros
+*.log
+.env*
+.vscode
+.idea
+Dockerfile
+.dockerignore
+README.md
