@@ -138,22 +138,43 @@
   }
 }
 
-/* E-book Menu Link Style */
-.ebook-menu-link {
-  color: #BE5028 !important;
+/* Highlighted Menu Links (E-book, TeleNutri, EAD) */
+.ebook-menu-link { --menu-badge-color: #BE5028; }     /* Laranja */
+.telenutri-menu-link { --menu-badge-color: #1F3A2C; } /* Verde escuro */
+.ead-menu-link { --menu-badge-color: #1E3A5F; }       /* Azul escuro */
+
+.ebook-menu-link,
+.telenutri-menu-link,
+.ead-menu-link {
+  color: var(--menu-badge-color) !important;
   font-weight: 700 !important;
-  border: 1px solid #BE5028;
+  border: 1px solid var(--menu-badge-color);
   padding: 4px 10px;
   border-radius: 4px;
   transition: all 0.3s ease;
 }
 
-.ebook-menu-link:after {
+.ebook-menu-link:after,
+.telenutri-menu-link:after,
+.ead-menu-link:after {
   display: none !important; /* hide the underline animation */
 }
 
-.ebook-menu-link:hover {
-  background-color: #BE5028;
+.ebook-menu-link:hover,
+.telenutri-menu-link:hover,
+.ead-menu-link:hover {
+  background-color: var(--menu-badge-color);
   color: #ffffff !important;
+}
+
+/* Menu com mais itens: compactar em telas medias */
+@media (min-width: 993px) and (max-width: 1200px) {
+  .desktop-nav ul {
+    gap: 1.1rem;
+  }
+
+  .desktop-nav a {
+    font-size: 0.9rem;
+  }
 }
 

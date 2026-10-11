@@ -25,7 +25,8 @@ export default function Header() {
             <li><a href="/#sobre">Nossa História</a></li>
             <li><a href="/#metodo">Missão e Valores</a></li>
             <li><Link to="/ebook" className="ebook-menu-link">E-book</Link></li>
-            <li><a href="https://telenutri.jhinstituto.com.br/agendar/jessica-herculano" target="_blank" rel="noopener noreferrer">TeleNutri</a></li>
+            <li><a href="https://telenutri.jhinstituto.com.br/agendar/jessica-herculano" target="_blank" rel="noopener noreferrer" className="telenutri-menu-link">TeleNutri</a></li>
+            <li><a href="https://ead.jhinstituto.com.br" target="_blank" rel="noopener noreferrer" className="ead-menu-link">EAD</a></li>
             <li><a href="https://wa.me/5521997148623" target="_blank" rel="noopener noreferrer">Contato</a></li>
           </ul>
         </nav>
@@ -53,7 +54,8 @@ export default function Header() {
             <li><a href="/#sobre" onClick={() => setIsMenuOpen(false)}>Nossa História</a></li>
             <li><a href="/#metodo" onClick={() => setIsMenuOpen(false)}>Missão e Valores</a></li>
             <li><Link to="/ebook" className="ebook-menu-link" onClick={() => setIsMenuOpen(false)}>E-book</Link></li>
-            <li><a href="https://telenutri.jhinstituto.com.br/agendar/jessica-herculano" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>TeleNutri</a></li>
+            <li><a href="https://telenutri.jhinstituto.com.br/agendar/jessica-herculano" target="_blank" rel="noopener noreferrer" className="telenutri-menu-link" onClick={() => setIsMenuOpen(false)}>TeleNutri</a></li>
+            <li><a href="https://ead.jhinstituto.com.br" target="_blank" rel="noopener noreferrer" className="ead-menu-link" onClick={() => setIsMenuOpen(false)}>EAD</a></li>
             <li><a href="https://wa.me/5521997148623" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>Contato</a></li>
           </ul>
           <div className="social-icons-mobile">
